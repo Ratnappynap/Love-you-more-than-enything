@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шкала любви</title>
+     <link rel="stylesheet" href="CSS/style.css">
+      <link rel="stylesheet" href="CSS/normalize.css">
+</head>
+<body>
+    <header>
+        <ul class="header_ul">
+            <li class="love_header"> <a href="index.html">
+Люблю</a>
+            </li>
+            <li class="love_header"> <a href="why.html">
+Почему я тебя люблю</a>
+            </li>
+            <li class="love_header"> <a href="whynot.html">
+Почему тебя нельзя не любить</a>
+            </li>
+            <li class="love_header"> <a href="much.html">
+Насколько сильно я тебя сегодня люблю</a>
+            </li>
+            <li class="love_header"><a href="scale.html">
+Шкала любви</a>
+            </li>
+        </ul>
+    </header>
+    <div class="home">
+       
+    <h1>Шкала любви</h1>
+ <div class="kiss">
+            <img src="IMG/flower.png" alt="kiss">
+        </div>
+       
+    </div>
+    <div class="scale">
+        <h2>Сила любви!!</h2>
+<div class="thermometer-container">
+        <div class="thermometer" id="thermometer"></div>
+        <div class="scale">
+            <div class="scale-mark"></div>
+            <div class="scale-mark"></div>
+            <div class="scale-mark"></div>
+            <div class="scale-mark"></div>
+            <div class="scale-mark"></div>
+            <div class="scale-mark"></div>
+            <div class="scale-mark"></div>
+            <div class="scale-mark"></div>
+            <div class="scale-mark"></div>
+            <div class="scale-mark"></div>
+        </div>
+    </div>
+    <div class="temperature-display" id="temperatureDisplay">0°C</div>
+
+</div>
+ <div class="glupost">
+    <img class="img1" src="IMG/roses.gif" alt="">
+    <img class="img2" src="IMG/roses2.gif" alt="">
+    <img class="img3" src="IMG/watc.png" alt="">
+ </div>
+    
+</body>
+<script>
+        const thermometer = document.getElementById('thermometer');
+        const temperatureDisplay = document.getElementById('temperatureDisplay');
+
+        function updateTemperature() {
+            // Генерируем случайную температуру от -10°C до 40°C
+            const randomTemp = Math.floor(Math.random() * 301) + 100;
+            
+            // Масштабируем для высоты термометра (0% = -10°C, 100% = 40°C)
+            const minTemp = 100;
+            const maxTemp = 100;
+            const tempPercentage = ((randomTemp - minTemp) / (maxTemp - minTemp)) * 100;
+            
+            // Обновляем высоту столбика
+            thermometer.style.setProperty('--temp-height', `${Math.min(Math.max(tempPercentage, 0), 100)}%`);
+            
+            // Выводим температуру текстом
+            temperatureDisplay.textContent = `${randomTemp}%`;
+        }
+
+        // Обновляем температуру сразу и каждые 3 секунды
+        updateTemperature();
+        setInterval(updateTemperature,100000);
+    </script>
+</html>

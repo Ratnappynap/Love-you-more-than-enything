@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I love you</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+</head>
+<body>
+  <header>
+        <ul class="header_ul">
+            <li class="love_header"> <a href="index.html">
+Люблю</a>
+            </li>
+            <li class="love_header"> <a href="why.html">
+Почему я тебя люблю</a>
+            </li>
+            <li class="love_header"> <a href="whynot.html">
+Почему тебя нельзя не любить</a>
+            </li>
+            <li class="love_header"> <a href="much.html">
+Насколько сильно я тебя сегодня люблю</a>
+            </li>
+            <li class="love_header"><a href="scale.html">
+Шкала любви</a>
+            </li>
+        </ul>
+    </header>
+    <div class="home">
+       
+        
+ <h1> ПОЗДРАВЛЯШКИ ПОСТУПИВШЕЙ ЕЕЕЕЕЕЕЕЕЕЕЕ</h1> 
+ <div class="kiss">
+            <img src="IMG/flower.png" alt="kiss">
+        </div>
+       
+    </div>
+   <div class="love">
+            <img src="IMG/love_defenition.png" alt="love_defenition">
+        </div>
+ <button class="cool" id='confettiButton'>Нажми меня</button>
+     
+ 
+ <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>document.getElementById('confettiButton').addEventListener('click', function() {
+    confetti({
+        particleCount: 250,
+        spread: 200,
+        origin: { y: 0.8 }
+    });
+});</script>
+</div>
+</body>
+</html>
