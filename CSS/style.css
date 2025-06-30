@@ -1,0 +1,448 @@
+*{
+    width: 1200px;
+    justify-content:baseline;
+   
+}
+/* задаём глобальные переменные для цветов, в которые будем окрашивать текст */
+:root {
+  --color-1: #ff9db2;
+  --color-2: #ff6a6a;
+  --color-3: #ff8484;
+  --color-4: #ffd7cf;
+  --color-5: #ff7e96;
+}
+/* настройки блока с текстом */
+.home {
+  /* фон */
+  background: none;
+  /* межстрочное расстояние */
+  line-height: 1.5;
+  /* подключаем сетку */
+  display: grid;
+  /* ставим содержимое в центр */
+  place-items:center;
+margin-left: -305px;
+}
+h1 {
+  /* настраиваем внешний вид шрифта */
+  font-family: sans-serif;
+  font-size: 150px;
+  font-weight: 900;
+
+  /* подстраиваем ширину заголовка под самое длинное слово*/
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+
+  /* делаем автоматические отступы */
+  margin: auto;
+  /* переводим все буквы в заглавные */
+  text-transform: uppercase;
+  /* делаем цветные полосы по тексту */
+background: linear-gradient(219deg, 
+  var(--color-1) 19%, 
+  transparent 19%,transparent 20%, 
+  var(--color-2) 20%, var(--color-2)  39%,
+  transparent 39%,transparent 40%, 
+  var(--color-3) 40%,var(--color-3) 59% ,
+  transparent 59%,transparent 60%, 
+  var(--color-4) 60%, var(--color-4) 79%,
+  transparent 79%, transparent 80%, 
+  var(--color-5) 80%);
+/* обрезаем фон по контуру букв */
+background-clip: text;
+-webkit-background-clip: text;
+
+/* делаем заголовок прозрачным, чтобы был виден цветной фон */
+color: transparent;
+}
+body {
+    background: scroll url(../IMG/cupid1.png);
+    background-repeat: no-repeat;
+  position: relative; /* необходима для позиционирования псевдоэлемента */
+background-color: rgb(255, 178, 178);
+}
+
+
+body::after {
+  content: ""; /* создаём служебный элемент */
+  background: url('../IMG/i.jpg'), url(../IMG/cupid1.jpg); /* определяем путь до изображения */
+  opacity: 0.8;  /* устанавливаем требуемый уровень прозрачности */
+  position:fixed;
+  
+  top: 0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  z-index: -2; /* размещаем псевдоэлемент под основным слоем */
+}
+.header_ul{
+display: flex;
+
+}
+.love_header{
+    
+    transition: 1.4s;
+    margin-top: 0px;
+  margin-left: 100px;
+  list-style: none;
+padding: 10px;
+box-shadow: inset 5px 4px 80px  rgb(193, 107, 120) ;
+}
+.love_header a{
+    font-size: 25px;
+    font-weight: bolder;
+    background: linear-gradient(219deg, 
+  var(--color-1) 19%, 
+  transparent 19%,transparent 20%, 
+  var(--color-2) 20%, var(--color-2)  39%,
+  transparent 39%,transparent 40%, 
+  var(--color-3) 40%,var(--color-3) 59% ,
+  transparent 59%,transparent 60%, 
+  var(--color-4) 60%, var(--color-4) 100%,
+  transparent 100%, transparent 9%, 
+  var(--color-5) 100%);
+/* обрезаем фон по контуру букв */
+background-clip: text;
+-webkit-background-clip: text;
+
+/* делаем заголовок прозрачным, чтобы был виден цветной фон */
+color: transparent;
+}
+.love_header a:hover{
+    transition: 1.4s;
+    color: white;
+    text-decoration: dotted;
+}
+.home h1{
+    
+    position: relative;
+    z-index: 0;
+}
+.kiss{
+ background-size: cover;
+    position:absolute;
+width: min-content;
+    background: url(../IMG/kiss.png);
+    opacity: 0.6;
+    margin-left: 200px;
+    z-index: -1;
+}
+.kiss img{
+    width: 100px;
+    position: relative;
+    z-index: -1;
+}
+.love img{
+       width: auto;
+    position: relative;
+    margin-left: 600px;
+    z-index: -1;
+    box-shadow: inset 1px 1px 70px #ff6a6a;
+}
+.cool{
+    color: #de5f5f;
+    font-family:Helvetica, sans-serif;
+    font-size: 30px;
+    position: relative;
+    background:linear-gradient(45deg ,#ff7e96, pink) ;
+    border: none;
+    border-radius: 10px 50px 0px 30px;
+    z-index: 1;
+    width: 300px;
+    height: 100px;
+   margin-left: 230px;
+margin-top: -300px;
+cursor: pointer;
+transition: 1.4s ease-in-out 0.7s;
+margin-bottom: 10px;
+}
+.cool:hover {
+    width: 200px;
+    color: white;
+    transition: 1.4s ease-in-out 0.5s;
+  background:linear-gradient(100deg ,#ff5b5b, rgb(128, 0, 19)) ;
+}
+.text{
+    width: 850px;
+    position: absolute;
+margin-left: 100px;
+color: #ffc2cd;
+background: linear-gradient(100deg ,#ff8686, rgb(128, 0, 19));
+   box-shadow:  1px 1px 90px #ff6a6a;
+   z-index: 0;
+     padding: 10px;
+}
+.lovelove{
+    position: absolute;
+    background:  url(../IMG/love100.png);
+    z-index: -1;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.lovelove img{
+    margin-top: 150px;
+    width: 600px;
+}
+span{
+    color: white;
+}
+.miamo{
+ 
+margin-left: 670px;
+color: #ffc2cd;
+background: linear-gradient(100deg ,#ff8686, rgb(128, 0, 19));
+   box-shadow:  1px 1px 90px #ff6a6a;
+ margin-top: 400px;
+
+  width: 400px;
+  padding: 10px;
+}
+.miamo h2{
+
+     width: 400px;
+}
+.whynot{
+ margin-left: 90px;
+color: #ffc2cd;
+background: linear-gradient(100deg ,#ff8686, rgb(128, 0, 19));
+   box-shadow:  1px 1px 90px #ff6a6a;
+  width:auto;
+  padding: 10px; 
+  margin-bottom: 30px;
+}
+.whynot{
+    font-size: 20px;
+}
+.whynot h2{
+    color: white;
+    justify-self: center;
+    text-align: center;
+    font-size: 37px;
+      width: 400px;
+}
+.whynot p{
+    width: 1000px;
+    padding: 20px;
+    background: #e2395879;
+}
+.much{
+    margin-top: 40px;
+}
+#result{
+    padding: 5px;
+    margin-top: -40px;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 900;
+    width: 500px;
+    margin-left: 160px;
+    background: url(../IMG/fierworks1.gif);
+}
+
+.scale h2{
+ margin-left: 490px;
+color: #ffd8df;
+background: linear-gradient(100deg ,#ff8686, rgb(128, 0, 19));
+   box-shadow:  1px 1px 90px #ff6a6a;
+  width:200px;
+  padding: 10px; 
+  margin-bottom: 10px;
+
+}
+.thermometer-container {
+            display: flex;
+            align-items: center;
+  
+        }
+
+        .thermometer {
+         
+            margin-left: 600px;
+            width: 100px;
+            height: 200px;
+            background-color: #f0f0f0;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .thermometer::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: var(--temp-height, 30%);
+            background-color: #ffa7a7;
+            border-radius: 20px 20px 0 0;
+            transition: height 3.5s ease;
+        }
+
+        .thermometer::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background-color: #ffa7a7;
+            border-radius: 50%;
+        }
+
+        .scale {
+     
+            position: relative;
+            left: 10px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 10px;
+          
+        }
+
+        .scale-mark {
+            width: 20px;
+            height: 5px;
+            background-color: #d5aaaa;
+        }
+
+        .scale-mark:nth-child(5n + 1) {
+            width: 30px;
+            height: 5px;
+            background-color: #a65050;
+        }
+
+        .temperature-display {
+            margin-top: 10px;
+            margin-left: 530px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff8686;
+            width: 200px;
+      
+         
+        }
+
+.img1{
+    opacity: 1;
+    width: 300px;
+    position: absolute;
+    z-index: -1;
+    margin-top: 150px;
+    margin-left: 320px;
+}
+.img2{
+     opacity: 1;
+    width: 500px;
+    position: absolute;
+     z-index: -1;
+    
+}
+.img3{
+     opacity: 1;
+    width: 500px;
+    position: relative;
+     z-index: -1;
+}
+@media (max-width: 576px){
+    *{
+        width: 100%;
+    }
+   
+    h1,h2,p{
+        width: 500px;
+    }
+    body{
+        width: 500px;
+    }
+    img{
+       width: 100%;
+    }
+    header{
+        width: 90%;
+        
+    }
+    .home{
+        width: 100%;
+        height: 100%;
+    }
+    button{
+        width: 100%;
+        margin: 0;
+    }
+  .scale{
+        width: 100%;
+        height: 100%;
+    }  .glupost{
+        width: 100%;
+        height: 100%;
+    }  .much{
+        width: 100%;
+        height: 100%;
+    }  .text{
+        width: 100%;
+        height: 100%;
+    }.miamo{
+        width: 100%;
+        height: 100%;
+    }.whynot{
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+
+@media (max-width: 360px){
+    *{
+        width: 100%;
+    }
+  
+    h1,h2,p{
+        width: 300px;
+    }
+     body{
+        width: 300px;
+    }
+    
+    img{
+        width: 100%;
+    }
+    header{
+        width: 90%;
+        
+    }
+     .home{
+        width: 100%;
+        height: 100%;
+    }
+    button{
+        width: 100%;
+        margin: 0;
+    }
+  .scale{
+        width: 100%;
+        height: 100%;
+    }  .glupost{
+        width: 100%;
+        height: 100%;
+    }  .much{
+        width: 100%;
+        height: 100%;
+    }  .text{
+        width: 100%;
+        height: 100%;
+    }.miamo{
+        width: 100%;
+        height: 100%;
+    }.whynot{
+        width: 100%;
+        height: 100%;
+    }
+
+}
