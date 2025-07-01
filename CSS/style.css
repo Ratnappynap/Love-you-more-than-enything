@@ -352,6 +352,7 @@ background: linear-gradient(100deg ,#ff8686, rgb(128, 0, 19));
 }
 @media (max-width: 576px){
     *{
+        margin: 0;
         width: 100%;
     }
    
@@ -403,6 +404,7 @@ background: linear-gradient(100deg ,#ff8686, rgb(128, 0, 19));
 
 @media (max-width: 360px){
     *{
+         margin: 0;
         width: 100%;
     }
   
