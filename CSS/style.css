@@ -368,12 +368,15 @@ background: linear-gradient(100deg ,#ff8686, rgb(128, 0, 19));
         width: 90%;
         
     }
+    .love_header{
+         width: 70%;
+    }
     .home{
-        width: 100%;
+        width: 80%;
         height: 100%;
     }
     button{
-        width: 100%;
+        width: 80%;
         margin: 0;
     }
   .scale{
@@ -413,16 +416,19 @@ background: linear-gradient(100deg ,#ff8686, rgb(128, 0, 19));
     img{
         width: 100%;
     }
-    header{
+     header{
         width: 90%;
         
     }
-     .home{
-        width: 100%;
+    .love_header{
+         width: 70%;
+    }
+    .home{
+        width: 80%;
         height: 100%;
     }
     button{
-        width: 100%;
+        width: 80%;
         margin: 0;
     }
   .scale{
